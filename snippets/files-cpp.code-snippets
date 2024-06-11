@@ -1,0 +1,71 @@
+{
+    "Read File": {
+        "prefix": "04-cpp-file-read",
+        "body": [
+            "// #include <fstream>",
+            "fstream file(\"${1:input.txt}\", ios::in);",
+            "// Insert code here",
+            "file.close();"
+        ]
+    },
+    "Write to File": {
+        "prefix": "04-cpp-file-write",
+        "body": [
+            "// #include <fstream>",
+            "fstream file(\"${1:output.txt}\", ios::out);",
+            "// Insert code here",
+            "file.close();"
+        ]
+    },
+    "Append to File": {
+        "prefix": "04-cpp-file-append",
+        "body": [
+            "// #include <fstream>",
+            "fstream file(\"${1:output.txt}\", ios::app);",
+            "// Insert code here",
+            "file.close();"
+        ]
+    },
+    "Read File Line by Line": {
+        "prefix": "04-cpp-file-read-line",
+        "body": [
+            "string line;",
+            "while (getline(file, line)) {",
+            "    // Insert code here",
+            "}"
+        ]
+    },
+    "Read File Word by Word": {
+        "prefix": "04-cpp-file-read-word",
+        "body": [
+            "string word;",
+            "while (file >> word) {",
+            "    // Insert code here",
+            "}"
+        ]
+    },
+    "Read File Char by Char": {
+        "prefix": "04-cpp-file-read-char",
+        "body": [
+            "char c;",
+            "while (file.get(c)) {",
+            "    // Insert code here",
+            "}"
+        ]
+    },
+    "Write String to File": {
+        "prefix": "04-cpp-file-write-line",
+        "body": [
+            "file << \"${1:line}\" << endl;"
+        ]
+    },
+    "Write Array to File": {
+        "prefix": "04-cpp-file-write-array",
+        "body": [
+            "for (int i = 0; i < n; i++) {",
+            "    file << arr[i] << \" \";",
+            "}",
+            "file << endl;"
+        ]
+    }
+}

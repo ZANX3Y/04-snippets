@@ -1,0 +1,148 @@
+{
+    "Empty Activity": {
+        "prefix": "04-android-empty-activity",
+        "body": [
+            "class MainActivity : AppCompatActivity() {",
+            "    override fun onCreate(savedInstanceState: Bundle?) {",
+            "        super.onCreate(savedInstanceState)",
+            "        setContentView(R.layout.activity_main)",
+            "    }",
+            "}"
+        ]
+    },
+    "Find View By Id": {
+        "prefix": "04-android-find-view-by-id",
+        "body": [
+            "val view = findViewById<TypeOfView>(R.id.viewId)"
+        ]
+    },
+    "Log": {
+        "prefix": "log",
+        "body": [
+            "Log.d(\"TAG\", \"message\")"
+        ],
+        "description": "Log a message"
+    },
+    "Open Other Activity": {
+        "prefix": "04-android-open-other-activity",
+        "body": [
+            "val intent = Intent(this, OtherActivity::class.java)",
+            "startActivity(intent)"
+        ]
+    },
+    "Set Text": {
+        "prefix": "04-android-set-text",
+        "body": [
+            "view.text = \"text\"",
+            "// or",
+            "view.setText(\"text\")"
+        ]
+    },
+    "Click Listener": {
+        "prefix": "04-android-click-listener",
+        "body": [
+            "view.setOnClickListener {",
+            "    // do something",
+            "}"
+        ]
+    },
+    "Seek Bar Listener": {
+        "prefix": "04-android-seek-bar-listener",
+        "body": [
+            "seekBar.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {",
+            "    override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {",
+            "        // do something",
+            "    }",
+            "",
+            "    override fun onStartTrackingTouch(seekBar: SeekBar?) {",
+            "        // do something",
+            "    }",
+            "",
+            "    override fun onStopTrackingTouch(seekBar: SeekBar?) {",
+            "        // do something",
+            "    }",
+            "})"
+        ]
+    },
+    "Toast": {
+        "prefix": "04-android-toast",
+        "body": [
+            "Toast.makeText(this, \"message\", Toast.LENGTH_SHORT).show()"
+        ]
+    },
+    "List View Usage": {
+        "prefix": "04-android-list-view-usage",
+        "body": [
+            "val listView = findViewById<ListView>(R.id.listView)",
+            "val items = listOf(\"item1\", \"item2\", \"item3\")",
+            "val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, items)",
+            "listView.adapter = adapter",
+            "listView.setOnItemClickListener { parent, view, position, id ->",
+            "    val item = items[position]",
+            "    // do something",
+            "}"
+        ]
+    },
+    "Recycler View Usage": {
+        "prefix": "04-android-recycler-view-usage",
+        "body": [
+            "class ItemAdapter(",
+            "    private val items: List<String>",
+            "    private val listener: (String) -> Unit",
+            ") : RecyclerView.Adapter<ItemAdapter.ItemHolder>() {",
+            "",
+            "    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemHolder {",
+            "        val view = LayoutInflater.from(parent.context).inflate(R.layout.item, parent, false)",
+            "        return ItemHolder(view)",
+            "    }",
+            "",
+            "    override fun onBindViewHolder(holder: ItemHolder, position: Int) {",
+            "        holder.bind(items[position], listener)",
+            "    }",
+            "",
+            "    override fun getItemCount(): Int = items.size",
+            "",
+            "    class ItemHolder(private val view: View) : RecyclerView.ViewHolder(view) {",
+            "        fun bind(item: String, listener: (String) -> Unit) {",
+            "            itemView.findViewById<TextView>(R.id.textView).text = item",
+            "            itemView.setOnClickListener { listener(item) }",
+            "        }",
+            "    }",
+            "}",
+            "",
+            "",
+            "// inside onCreate of Activity:",
+            "val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)",
+            "val items = listOf(\"item1\", \"item2\", \"item3\")",
+            "val adapter = ItemAdapter(items) { item ->",
+            "    // do something",
+            "}",
+            "recyclerView.adapter = adapter",
+            "recyclerView.layoutManager = LinearLayoutManager(this)"
+        ]
+    },
+    "Shared Preferences": {
+        "prefix": "04-android-shared-preferences",
+        "body": [
+            "val sharedPreferences = getSharedPreferences(\"name\", Context.MODE_PRIVATE)",
+            "val editor = sharedPreferences.edit()",
+            "editor.putString(\"key\", \"value\")",
+            "editor.apply()",
+            "",
+            "val value = sharedPreferences.getString(\"key\", \"defaultValue\")"
+        ]
+    },
+    "Set Image": {
+        "prefix": "04-android-set-image",
+        "body": [
+            "imageView.setImageResource(R.drawable.image)"
+        ]
+    },
+    "Play Sound": {
+        "prefix": "04-android-play-sound",
+        "body": [
+            "val mediaPlayer = MediaPlayer.create(this, R.raw.sound)",
+            "mediaPlayer.start()"
+        ]
+    }
+}

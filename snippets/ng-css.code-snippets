@@ -1,0 +1,8 @@
+{
+    "Import Bootstrap": {
+        "prefix": "04-ng-import-bootstrap",
+        "body": [
+            "@import 'bootstrap/dist/css/bootstrap.min.css';"
+        ],
+    },
+}

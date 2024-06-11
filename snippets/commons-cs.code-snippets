@@ -1,0 +1,64 @@
+{
+    "C# Starter": {
+        "prefix": "04-cs-starter",
+        "body": [
+            "using System;",
+            "",
+            "namespace Program {",
+            "    class Program {",
+            "        static void Main(string[] args) {",
+            "            Console.WriteLine(\"Hello, World!\");",
+            "        }",
+            "    }",
+            "}"
+        ],
+        "description": "Template for C# programs"
+    },
+    "Print Array": {
+        "prefix": "04-cs-print-array",
+        "body": [
+            "for (int i = 0; i < n; i++) {",
+            "    Console.Write(arr[i] + \", \");",
+            "}",
+            "Console.WriteLine();"
+        ]
+    },
+    "Random Array": {
+        "prefix": "04-cs-random-array",
+        "body": [
+            "Random rnd = new Random();",
+            "",
+            "int n = 10;",
+            "int[] arr = new int[n];",
+            "",
+            "for (int i = 0; i < n; i++) {",
+            "    arr[i] = rnd.Next(1, 101); // Change the range as needed",
+            "}"
+        ]
+    },
+    "Type Conversion": {
+        "prefix": "04-cs-type-conversion",
+        "body": [
+            "int n = 123;",
+            "string s = n.ToString();",
+            "double d = double.Parse(s);",
+            "int i = int.Parse(s);",
+            "char c = s[0];"
+        ]
+    },
+    "Class": {
+        "prefix": "04-cs-class",
+        "body": [
+            "class ${1:ClassName} {",
+            "    ${2:public} ${3:int} ${4:Variable};",
+            "",
+            "    ${2:public} ${1:ClassName}(${3:int} ${4:Variable}) {",
+            "        this.${4:Variable} = ${4:Variable};",
+            "    }",
+            "}",
+            "",
+            "// Usage:",
+            "// ${1:ClassName} obj = new ${1:ClassName}(10);"
+        ]
+    }
+}

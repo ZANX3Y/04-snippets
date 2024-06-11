@@ -1,0 +1,67 @@
+{
+    "C++ Starter": {
+        "prefix": "04-cpp-starter",
+        "body": [
+            "#include <iostream>",
+            "",
+            "using namespace std;",
+            "",
+            "int main() {",
+            "    cout << \"Hello, World!\" << endl;",
+            "    return 0;",
+            "}"
+        ],
+        "description": "Template for C++ programs"
+    },
+    "Print Array": {
+        "prefix": "04-cpp-print-array",
+        "body": [
+            "for (int i = 0; i < n; i++) {",
+            "    cout << arr[i] << \", \";",
+            "}",
+            "cout << endl;"
+        ]
+    },
+    "Random Array": {
+        "prefix": "04-cpp-random-array",
+        "body": [
+            "// #include <random>",
+            "",
+            "random_device rd;",
+            "uniform_int_distribution<int> dis(1, 100); // Change the range as needed",
+            "",
+            "int n = 10;",
+            "int arr[n];",
+            "",
+            "for (int i = 0; i < n; i++) {",
+            "    arr[i] = dis(rd);",
+            "}"
+        ]
+    },
+    "Type Conversion": {
+        "prefix": "04-cpp-type-conversion",
+        "body": [
+            "int n = 123;",
+            "string s = to_string(n);",
+            "double d = stod(s);",
+            "int i = stoi(s);",
+            "char c = s[0];"
+        ]
+    },
+    "Class": {
+        "prefix": "04-cpp-class",
+        "body": [
+            "class ${1:ClassName} {",
+            "public:",
+            "    ${3:int} ${4:Variable};",
+            "",
+            "    ${1:ClassName}(${3:int} ${4:Variable}) {",
+            "        this->${4:Variable} = ${4:Variable};",
+            "    }",
+            "};",
+            "",
+            "// Usage:",
+            "// ${1:ClassName} obj(10);"
+        ]
+    }
+}

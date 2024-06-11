@@ -1,0 +1,78 @@
+{
+    "Read File": {
+        "prefix": "04-cs-file-read",
+        "body": [
+            "string filepath = \"${1:input.txt}\";",
+            "StreamReader file = new StreamReader(filepath);",
+            "// Insert code here",
+            "file.Close();"
+        ]
+    },
+    "Write to File": {
+        "prefix": "04-cs-file-write",
+        "body": [
+            "string filepath = \"${1:output.txt}\";",
+            "StreamWriter file = new StreamWriter(filepath);",
+            "// Insert code here",
+            "file.Close();"
+        ]
+    },
+    "Append to File": {
+        "prefix": "04-cs-file-append",
+        "body": [
+            "string filepath = \"${1:output.txt}\";",
+            "using (StreamWriter file = File.AppendText(filepath)) {",
+            "    // Insert code here",
+            "    // eg. file.WriteLine(\"Hello, World!\");",
+            "}"
+        ]
+    },
+    "Read File Line by Line": {
+        "prefix": "04-cs-file-read-line",
+        "body": [
+            "string filepath = \"${1:input.txt}\";",
+            "string[] lines = File.ReadAllLines(filepath);",
+            "foreach (string line in lines) {",
+            "    // Insert code here",
+            "}"
+        ]
+    },
+    "Read File Word by Word": {
+        "prefix": "04-cs-file-read-word",
+        "body": [
+            "string filepath = \"${1:input.txt}\";",
+            "string text = File.ReadAllText(filepath);",
+            "string[] words = text.Split(' ');",
+            "foreach (string word in words) {",
+            "    // Insert code here",
+            "}"
+        ]
+    },
+    "Read File Char by Char": {
+        "prefix": "04-cs-file-read-char",
+        "body": [
+            "string filepath = \"${1:input.txt}\";",
+            "string text = File.ReadAllText(filepath);",
+            "foreach (char c in text) {",
+            "    // Insert code here",
+            "}"
+        ]
+    },
+    "Write String to File": {
+        "prefix": "04-cs-file-write-line",
+        "body": [
+            "string filepath = \"${1:output.txt}\";",
+            "string line = \"${2:line}\";",
+            "File.WriteAllText(filepath, line);"
+        ]
+    },
+    "Write Array to File": {
+        "prefix": "04-cs-file-write-array",
+        "body": [
+            "string filepath = \"${1:output.txt}\";",
+            "int[] arr = {1, 2, 3, 4, 5};",
+            "string line = string.Join(\", \", arr);",
+            "File.WriteAllText(filepath, line);"
+        ]
+    }
+}

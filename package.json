@@ -1,0 +1,55 @@
+{
+  "name": "04-snippets",
+  "displayName": "04 Snippets",
+  "description": "Useful INF.04 snippets",
+  "version": "1.0.0",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "publisher": "zanxey",
+  "repository": "github:zanx3y/04-snippets",
+  "license": "MIT",
+  "contributes": {
+    "snippets": [
+      {
+        "language": "cpp",
+        "path": "./snippets/algorithms-cpp.code-snippets"
+      },
+      {
+        "language": "cpp",
+        "path": "./snippets/commons-cpp.code-snippets"
+      },
+      {
+        "language": "csharp",
+        "path": "./snippets/commons-cs.code-snippets"
+      },
+      {
+        "language": "cpp",
+        "path": "./snippets/files-cpp.code-snippets"
+      },
+      {
+        "language": "csharp",
+        "path": "./snippets/files-cs.code-snippets"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/ng-ts.code-snippets"
+      },
+      {
+        "language": "css",
+        "path": "./snippets/ng-css.code-snippets"
+      },
+      {
+        "language": "kotlin",
+        "path": "./snippets/android-kt.code-snippets"
+      },
+      {
+        "language": "xml",
+        "path": "./snippets/android-xml.code-snippets"
+      }
+    ]
+  }
+}
